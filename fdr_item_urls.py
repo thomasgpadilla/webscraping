@@ -1,6 +1,3 @@
-#purpose: 1. grab item specific URLs links to feed to WGET 2. save results to txt OR csv 
-#usecase: Franklin D. Roosevelt, Master Speech File, 1898-1945 | Franklin D. Roosevelt Presidential Library & Museum
-
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import csv
