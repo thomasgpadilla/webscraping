@@ -5,6 +5,6 @@ Scripts below help build URL lists to feed to WGET for bulk downloading.
 
 fdr_item_urls: scrape item URLs matching a type, write URLs to TXT or CSV file 
 
-frus_pdf_urls: scrape item URLs matching a type, proceed to follow each URL to new page and scrape PDF URLs, write PDF URLs to TXT file
+frus_pdf_urls: scrape item page URLs, proceed to follow each URL to new page and scrape PDF URLs, write PDF URLs to TXT file
 
 contact: tgpadillajr@gmail.com
