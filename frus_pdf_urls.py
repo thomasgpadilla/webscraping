@@ -7,16 +7,16 @@ soup = BeautifulSoup(html, 'html.parser')
 
 with open("fdr_pdf_urls.txt", "w") as file:
 
-	for itemlinks in soup.find_all("p", {"class":"cntsitem"}):
+	for links in soup.find_all("p", {"class":"cntsitem"}):
 
-		for link in itemlinks.find_all('a'):
-			itemurl = 'http://digicoll.library.wisc.edu/' + link.get('href')
+		for link in links.find_all('a'):
+			itempageurl = 'http://digicoll.library.wisc.edu/' + link.get('href')
 
-			pdfurl = requests.get (itemurl)
-			pdfsoup=BeautifulSoup(pdfurl.content, 'html.parser')
+			pdfurls = requests.get (itempageurl)
+			pdfsoup=BeautifulSoup(pdfurls.content, 'html.parser')
 
-		for pdflink in pdfsoup.find_all("div", {"class":"itemmd"}):
-				for plink in pdflink.find_all('a'):
-					print (plink.get('href'))
-					file.write(plink.get('href')+"\n")
+		for pdfurls in pdfsoup.find_all("div", {"class":"itemmd"}):
+				for item in pdfurls.find_all('a'):
+					print (item.get('href'))
+					file.write(item.get('href')+"\n")
 
