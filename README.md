@@ -1,8 +1,7 @@
 # webscraping
 Sample scripts for web scraping. 
 Typically tied to use cases, but generally extensible to other projects.
-
-Scripts below help build URL lists to feed to WGET for bulk downloading in a responsible manner (e.g. rate limiting). 
+Scripts help build URL lists to feed to WGET for bulk downloading in a responsible manner (e.g. rate limiting). 
 
 **fdr_item_urls**: scrape item URLs matching a type from the Franklin D Roosevelt Master Speech File, write URLs to TXT or CSV file 
 
