@@ -9,4 +9,6 @@ Scripts help build URL lists to feed to WGET for bulk downloading in a responsib
 
 **frus_allvolume_pdf_urls**: scrape all volume URLs from the the University of Wisconsin Madison's Foreign Relations of the United States, proceed to follow each URL to each volume, navigate down to each section of each volume and scrape PDF URLs, write PDF URLs to TXT file
 
+**frus_allvolume_citation_urls**: scrape all volume URLs from the the University of Wisconsin Madison's Foreign Relations of the United States, proceed to follow each URL to each volume, navigate down to each section of each volume and scrape PDF citations, write citations to TXT file
+
 contact: tgpadillajr@gmail.com
