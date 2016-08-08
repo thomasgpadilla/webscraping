@@ -6,7 +6,7 @@ import requests
 html = urlopen("http://digicoll.library.wisc.edu/cgi-bin/FRUS/FRUS-idx?type=browse&scope=FRUS.FRUS1")
 soup = BeautifulSoup(html, 'html.parser')
 
-with open("frus_allpdf_titles.txt", "w") as file:
+with open("frus_section_title.txt", "w") as file:
 
 #scrape FRUS volume relative URLs 
 	for links in soup.find_all("p", {"class":"isshead"}):
@@ -33,6 +33,6 @@ with open("frus_allpdf_titles.txt", "w") as file:
 						for item in pdfurls.find_all('div', {"class":"itemmd"}):
 								for title in item.find_all('p'):
 									print (title.get_text())
-									#file.write((title.get_text())+"\n")
+									#file.write((title.get_text())+"\n") - cant get this dang write to work
 						
 
