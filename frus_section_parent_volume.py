@@ -6,7 +6,7 @@ import requests
 html = urlopen("http://digicoll.library.wisc.edu/cgi-bin/FRUS/FRUS-idx?type=browse&scope=FRUS.FRUS1")
 soup = BeautifulSoup(html, 'html.parser')
 
-with open("fdr_allpdf_citations.txt", "w") as file:
+with open("frus_section_parent_volume.txt", "w") as file:
 
 #scrape FRUS volume relative URLs 
 	for links in soup.find_all("p", {"class":"isshead"}):
